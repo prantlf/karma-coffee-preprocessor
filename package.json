@@ -9,7 +9,8 @@
   "scripts": {
     "lint": "denolint",
     "check": "grunt",
-    "test": "denolint && c8 grunt"
+    "test": "denolint && c8 grunt",
+    "version": "grunt npm-contributors"
   },
   "repository": {
     "type": "git",
@@ -42,12 +43,12 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@semantic-release/changelog": "^6.0.3",
+    "@semantic-release/git": "^10.0.1",
     "c8": "^7.13.0",
     "coffeescript": "^2.7.0",
     "denolint": "2.0.7",
     "grunt": "^1.6.1",
-    "grunt-bump": "^0.8.0",
-    "grunt-conventional-changelog": "^6.1.0",
     "grunt-karma": "^4.0.2",
     "grunt-npm": "0.0.2",
     "karma": "^6.4.1",
@@ -55,6 +56,21 @@
     "karma-mocha": "^2.0.1",
     "load-grunt-tasks": "^5.1.0",
     "mocha": "^10.2.0"
+  },
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      "@semantic-release/npm",
+      [
+        "@semantic-release/github",
+        {
+          "failComment": false
+        }
+      ],
+      "@semantic-release/git"
+    ]
   },
   "contributors": [
     "Ferdinand Prantl <prantlf@gmail.com>",

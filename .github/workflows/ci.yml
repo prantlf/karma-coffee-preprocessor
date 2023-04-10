@@ -1,11 +1,11 @@
-name: Test
+name: Test or Release
 
 on:
   - push
   - pull_request
 
 jobs:
-  test-linux:
+  test-or-release:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout Sources
@@ -25,7 +25,15 @@ jobs:
       run: npm test
     - name: Coverage
       uses: codecov/codecov-action@v3
-  test-windows:
+    - name: Publish
+      uses: cycjimmy/semantic-release-action@v3
+      with:
+        semantic_version: 19
+        branches: master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+  test:
     runs-on: windows-latest
     steps:
     - name: Checkout Sources

@@ -6,26 +6,6 @@ module.exports = function (grunt) {
         commitMessage: 'chore: update contributors'
       }
     },
-    bump: {
-      options: {
-        commitMessage: 'chore: release v%VERSION%',
-        pushTo: 'upstream',
-        commitFiles: [
-          'package.json',
-          'CHANGELOG.md'
-        ]
-      }
-    },
-    conventionalChangelog: {
-      release: {
-        options: {
-          changelogOpts: {
-            preset: 'angular'
-          }
-        },
-        src: 'CHANGELOG.md'
-      }
-    },
     karma: {
       options: {
         configFile: 'examples/plus/karma.conf.js'
@@ -45,14 +25,4 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt)
 
   grunt.registerTask('default', ['karma'])
-
-  grunt.registerTask('release', 'Bump the version and publish to NPM.', function (type) {
-    grunt.task.run([
-      'npm-contributors',
-      'bump-only:' + (type || 'patch'),
-      'conventionalChangelog',
-      'bump-commit',
-      'npm-publish'
-    ])
-  })
 }
