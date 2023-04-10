@@ -5,7 +5,10 @@ module.exports = function (config) {
     frameworks: ['mocha'],
 
     files: [
-      '*.coffee'
+      '*.coffee',
+      // For tests with external source maps
+      { pattern: '*.map', included: false, nocache: true },
+      { pattern: '**/*.map', included: false, nocache: true }
     ],
 
     preprocessors: {

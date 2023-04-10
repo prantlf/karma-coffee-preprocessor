@@ -10,9 +10,20 @@ module.exports = function (grunt) {
       options: {
         configFile: 'examples/plus/karma.conf.js'
       },
-      mapped: {
+      inline: {
       },
-      unmapped: {
+      external: {
+        coffeePreprocessor: {
+          writeTransformed: true
+        }
+      },
+      separate: {
+        coffeePreprocessor: {
+          writeTransformed: true,
+          transformDir: 'tmp'
+        }
+      },
+      nomap: {
         coffeePreprocessor: {
           options: {
             sourceMap: false

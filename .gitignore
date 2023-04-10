@@ -1,2 +1,5 @@
 coverage
+examples/plus/tmp
+examples/plus/plus.js*
+examples/plus/test.js*
 node_modules
