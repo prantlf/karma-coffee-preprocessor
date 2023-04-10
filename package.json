@@ -1,5 +1,5 @@
 {
-  "name": "karma-coffee-preprocessor",
+  "name": "@prantlf/karma-coffee-preprocessor",
   "version": "1.0.1",
   "description": "A Karma plugin. Compile coffee script on the fly.",
   "main": "index.js",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git://github.com/karma-runner/karma-coffee-preprocessor.git"
+    "url": "git://github.com/prantlf/karma-coffee-preprocessor.git"
   },
   "keywords": [
     "karma-plugin",
@@ -23,7 +23,7 @@
     "coffeescript",
     "coffee"
   ],
-  "author": "Vojta Jina <vojta.jina@gmail.com>",
+  "author": "Ferdinand Prantl <prantlf@gmail.com>",
   "c8": {
     "100": true,
     "include": [
@@ -42,6 +42,14 @@
     "karma": "^4 || ^5 || ^6"
   },
   "license": "MIT",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "https://github.com/prantlf/karma-coffee-preprocessor/blob/master/LICENSE"
+    }
+  ],
+  "homepage": "https://github.com/prantlf/karma-coffee-preprocessor#readme",
+  "bugs": "https://github.com/prantlf/karma-coffee-preprocessor/issues",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/git": "^10.0.1",
