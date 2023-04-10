@@ -1,3 +1,10 @@
+# [2.1.0](https://github.com/prantlf/karma-coffee-preprocessor/compare/v2.0.0...v2.1.0) (2023-04-10)
+
+
+### Features
+
+* Allow saving the transformed script and source map to disk ([0dbb86a](https://github.com/prantlf/karma-coffee-preprocessor/commit/0dbb86ad5692dcedff3625f2c4acb6f59465939a))
+
 ## [2.0.0](https://github.com/prantlf/karma-coffee-preprocessor/compare/ef1c7ae0c9a2153ba66e17610da175ac7996423d...v2.0.0) (2023-04-10)
 
 
@@ -121,4 +128,3 @@
 #### Features
 
 * make options, transformPath configurable ([486abccb](https://github.com/karma-runner/karma-coffee-preprocessor/commit/486abccb), closes [#1](https://github.com/karma-runner/karma-coffee-preprocessor/issues/1))
-
