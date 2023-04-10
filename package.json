@@ -1,6 +1,6 @@
 {
   "name": "@prantlf/karma-coffee-preprocessor",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "description": "A Karma plugin. Compile coffee scripts on the fly.",
   "main": "index.js",
   "files": [
