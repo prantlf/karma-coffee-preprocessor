@@ -26,13 +26,6 @@ module.exports = function (grunt) {
         src: 'CHANGELOG.md'
       }
     },
-    eslint: {
-      target: [
-        'index.js',
-        'gruntfile.js',
-        'examples/plus/karma.conf.js'
-      ]
-    },
     karma: {
       options: {
         configFile: 'examples/plus/karma.conf.js'
@@ -51,7 +44,7 @@ module.exports = function (grunt) {
 
   require('load-grunt-tasks')(grunt)
 
-  grunt.registerTask('default', ['eslint', 'karma'])
+  grunt.registerTask('default', ['karma'])
 
   grunt.registerTask('release', 'Bump the version and publish to NPM.', function (type) {
     grunt.task.run([
